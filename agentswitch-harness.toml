@@ -1,0 +1,7 @@
+# Seat 34, 15 Nov run (instructor, 13 Nov): one root file in the fork we submit from, never on main.
+# It runs the seat 35 suite, then the seat 31 suite, and writes one results.json (S34-35, run_all).
+install = "pip install uv && cd 34-eval-harness && uv sync --frozen --no-dev"
+run     = "cd 34-eval-harness && uv run --frozen --no-sync python -m eval_harness.run_all --suite suites/seat35 --suite suites/seat31 --out ../results.json"
+results = "results.json"
+instances = ["suryodaya", "keystone"]
+timeout_minutes = 30
